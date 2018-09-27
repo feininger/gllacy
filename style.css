@@ -63,19 +63,33 @@ body {
   outline: none;
 }
 
-
-
-
 .left,
 .right {
   position: relative;
   width: 560px;
   height: 220px;
+  box-sizing: border-box;
+  padding: 22px;
   margin-bottom: 40px;
   
   border-radius: 13px;
   
   outline: 1px solid magenta;
+}
+
+.left h2,
+.right h2{
+  margin: 0;
+  margin-bottom: 21px;
+  padding: 0;
+  font-size: 35px;
+}
+
+.left p,
+.right p {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
 }
 
 .left {
@@ -101,38 +115,29 @@ body {
   background-image: url(img/chocolate.jpg);
 }
 
-
 .items {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   
   width: 100%;
-/*  min-height: 300px;*/
-  
   padding-left: 14px;
   padding-right: 14px;
+  margin-bottom: 10px;
   
-/*  overflow: hidden;*/
   z-index: 5;
   
-/*  margin-left: -13px;*/
   outline: 1px solid black;
 }
 
 .item {
-  
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   
-  
   position: relative;
   width: 267px;
-/*  min-height: 300px;*/
   padding: 13px;
-  
-/*  overflow: hidden;*/
   
   outline: 1px solid black;
 }
@@ -158,7 +163,7 @@ body {
   position: absolute;
   display: block;
   width: 100%;
-  height: 112%;
+  height: 115%;
   top: 0px;
   left: 0px;
   border-radius: 10px;
@@ -168,12 +173,13 @@ body {
 }
 
 
-.less123 {
+.less {
   position: absolute;
   display: none;
-  height: 35px;
+  width: 267px;
+/*  height: 35px;*/
   top: 355px;
-  left: 54px;
+/*  left: 54px;*/
   font-size: 15px;
 }
 
@@ -295,18 +301,73 @@ body {
   background-image: url(img/strawberry.jpg);
 }
 
+.strawberry span {
+  font-size: 16px;
+  color: #353535;
+}
+
+.big-text-link{
+  display: block;
+  width: 290px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #353535;
+}
+
 .post {
   padding: 5px;
   box-sizing: border-box;
   background-image: url(img/post-bg.jpg);
+  border: 5px;
+  border-radius: 10px;
+}
+
+.post p{
+/*  padding: 22px;*/
+  padding-top: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #5a5a5a;
+}
+
+.inner form {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.post form .btn{
+  position: relative;
+  right: 0;
+  top:0;
+  margin-left: 12px;
+/*  left: 12px;*/
 }
 
 .inner {
   width: 100%;
   height: 100%;
   
+  box-sizing: border-box;
+  padding: 22px;
+  
   background-color: #f8f7f4;
   border-radius: 13px;
+}
+
+input {
+  width: 100%;
+  height: 46px;
+  padding: 12px;
+  box-sizing: border-box;
+  
+  font-size: 16px;
+  line-height: 24px;
+  
+  border: 1px solid #d3d3d2;
+  border-radius: 4px;
 }
 
 
