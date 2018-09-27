@@ -56,8 +56,10 @@ body {
   outline: none;
   background-image: 
       linear-gradient( 0deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
-  box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 1);
+  box-shadow:  0px 2px 2px 0px rgba(148, 39, 24, 1);
+  z-index: 10;
 }
+
 
 .btn:focus {
   outline: none;
@@ -70,7 +72,7 @@ body {
   height: 220px;
   box-sizing: border-box;
   padding: 22px;
-  margin-bottom: 40px;
+  margin-bottom: 26px;
   
   border-radius: 13px;
   
@@ -151,13 +153,7 @@ body {
   background-image: url(img/svg/hit.svg);
   z-index: 3;
 }
-/*
-.item:hover {
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
-}
-*/
+
 .item:hover::after {
   content: "";
   position: absolute;
@@ -230,7 +226,7 @@ body {
 
 .waffle{
   width: 1146px;
-  height: 305px;
+  height: 300px;
   
   padding: 21px;
   margin-top: 0px;
@@ -370,14 +366,108 @@ input {
   border-radius: 4px;
 }
 
-
-/*
-
-.lighting {
-    background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+footer.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  
+  box-sizing: border-box;
+  padding-left: 27px;
+  padding-right: 27px;
+  margin-bottom: 30px;
 }
-*/
 
+footer .logo {
+  width: 110px;
+}
 
+footer a {
+  font-size: 13px;
+  color: #ffffff;
+}
 
+footer p {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  color: #ffffff;
+}
 
+.social ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social li {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.social a {
+  display: block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 4px solid rgba(255,255,255, 0.6);
+  background-repeat: no-repeat;
+  opacity: 0.85;
+}
+
+.social a:hover {
+  opacity: 1;
+}
+
+.social a:active {
+  box-shadow: inset 0px 2px 1px 0px rgba(136, 136, 136, 1);
+}
+
+.social-twitter {
+  background-image: url(img/svg/twitter.svg);
+}
+
+.social-instagram {
+  background-image: url(img/svg/instagram.svg);
+}
+
+.social-fb {
+  background-image: url(img/svg/fb.svg);
+}
+
+.social-vk {
+  background-image: url(img/svg/vk.svg);
+}
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  
+  width: 360px;
+}
+
+.about .column {
+  padding-left: 32px;
+}
+
+.about a{
+  display: block;
+}
+
+.heart {
+  position: relative;
+  font-weight: 600;
+}
+
+.heart::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 15px;
+  height: 15px;
+  top: 5px;
+  left: -20px;
+  background-image: url(img/svg/heart.svg);
+  background-repeat: no-repeat;
+}
