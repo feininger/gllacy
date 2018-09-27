@@ -128,8 +128,6 @@ body {
   margin-bottom: 10px;
   
   z-index: 5;
-  
-  outline: 1px solid black;
 }
 
 .item {
@@ -140,8 +138,6 @@ body {
   position: relative;
   width: 267px;
   padding: 13px;
-  
-  outline: 1px solid black;
 }
 
 .item::before {
