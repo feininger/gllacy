@@ -9,14 +9,27 @@
 <body>
   <header class="container">
     <nav class="main-nav">
+     <a class="logo" href=""><img src="img/svg/logo.svg" alt="Gllacy logo"></a>
       <ul class="navigation">
-        <li><a class="logo" href=""><img src="img/svg/logo.svg" alt="Gllacy logo"></a></li>
         <li><a href="#">Каталог</a></li>
         <li><a href="#">Доставка и оплата</a></li>
         <li><a href="#">О компании</a></li>
       </ul>
     </nav>
-    <nav class="services">div</nav>
+    <nav class="services">
+      <ul>
+        <li class="search">
+          <form class="search-form" action="" method="post">
+            <input type="text" placeholder="Что ищем?">
+          </form>
+        </li>
+        <li class="login"><a href="#">Вход</a></li>
+        <li class="cart"><a href="#">Пусто</a></li>
+      </ul>
+    </nav>
+    <form class="search-form" action="" method="post">
+      <input type="text" placeholder="поиск">
+    </form>
   </header>
   <main class="container">
     <article class="article">
@@ -37,7 +50,7 @@
             <img class="image" src="img/shop/shop-item-1.jpg" alt="Сливочное с&nbsp;апельсиновым джемом и&nbsp;цитрусовой стружкой">
           </div>
           <span class="price">310&nbsp;₽<span class="kg">/кг</span></span>
-          <p href="#" class="description">Сливочное с&nbsp;апельсиновым джемом и&nbsp;цитрусовой стружкой</p>
+          <a href="#" class="description">Сливочное с&nbsp;апельсиновым джемом и&nbsp;цитрусовой стружкой</a>
           <button class="btn less">Быстрый просмотр</button>
         </div>
 

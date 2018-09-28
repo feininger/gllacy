@@ -88,6 +88,8 @@ header.container {
 }
 
 .main-nav {
+  display: flex;
+  margin-top: 10px;
   width: 560px;  
 }
 
@@ -95,22 +97,123 @@ header.container {
   width: 560px;  
 }
 
+a.logo {
+  border: 0;
+  margin-right: 20px;
+}
+
 .navigation {
   padding: 0;
   margin: 0;
+  margin-top: 10px;
   list-style: none;
-}
-
-a.logo {
-  border: 0;
 }
 
 .navigation li{
   position: relative;
   display: inline-block;
-  vertical-align: middle;
-  margin-right: 25px;
-  padding-bottom: 10px;
+  padding: 10px;
+}
+
+.navigation li:hover{
+  background-color: #ffffff;
+  border-radius: 40px;
+  
+}
+
+.navigation li:hover a{
+  color: #000000;
+  font-weight: 600;
+  border: 0;
+}
+
+.services a {
+  border: 0;
+}
+
+.services ul{
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+  align-items: center;
+  margin-top: 10px;
+  height: 64px;
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
+  list-style: none;
+  text-align: right;
+}
+
+.services li {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 40px;
+}
+
+.search {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-image: url(img/svg/loupe.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 10px solid #849d8f;
+}
+
+.search-form {
+  display: none;
+  position: absolute;
+  left: -221px;
+  top: 45px;
+  
+  box-sizing: border-box;
+  width: 261px;
+  padding: 15px;
+  
+  background-color: #f8f7f4;
+  border-radius: 5px;
+  
+  z-index: 10;
+}
+
+.search-form input{
+  
+}
+
+search-form:hover,
+.search:hover .search-form {
+  display: block;
+}
+
+.login a{
+  position: relative;
+  padding-left: 30px;
+}
+
+.login a::before{
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 2px;
+  background-image: url(img/svg/entrance%20white.svg);
+}
+
+.cart a{
+  position: relative;
+  padding-left: 30px;
+}
+
+.cart a::before{
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 2px;
+  background-image: url(img/svg/basket.svg);
 }
 
 .slider {
@@ -271,7 +374,11 @@ a.logo {
   margin-top: 15px;
   text-align: center;
   text-decoration: underline;
-  border-bottom: 0;
+  border: 0;
+}
+
+.description:hover {
+  border: 0;
 }
 
 .waffle{
