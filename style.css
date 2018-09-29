@@ -116,18 +116,15 @@ a.logo {
 }
 
 .navigation li:hover{
-  background-color: #ffffff;
+  background-color: #f8f7f4;
   border-radius: 40px;
   
 }
 
 .navigation li:hover a{
-  color: #000000;
+  background-color: #f8f7f4;
+  color: #343434;
   font-weight: 600;
-  border: 0;
-}
-
-.services a {
   border: 0;
 }
 
@@ -146,31 +143,58 @@ a.logo {
 }
 
 .services li {
-  display: inline-block;
+  position: relative;
   margin-left: 10px;
+}
+
+.services a {
+  position: relative;
+  display: block;
   padding: 10px;
+  padding-left: 45px;
+  
+  text-align: left;
+  
   background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 40px;
+  border: 0;
+}
+
+.services a:hover {
+  background-color: #f8f7f4;
+  color: #343434;
+  font-weight: 600;
   border-radius: 40px;
 }
 
-.search {
+.search:hover {
+  background-image: url(img/svg/loupe.svg);
+}
+
+a.search {
   position: relative;
   width: 20px;
   height: 20px;
+  margin-right: -10px;
+  padding: 10px;
   background-image: url(img/svg/loupe.svg);
   background-repeat: no-repeat;
   background-position: center;
-  border: 10px solid #849d8f;
+  border: 10px solid #849d8f; /* #849d8f */
+}
+
+.search:hover {
+  background-image: url(img/svg/loupe%20black.svg);
 }
 
 .search-form {
   display: none;
   position: absolute;
   left: -221px;
-  top: 45px;
+  top: 55px;
   
   box-sizing: border-box;
-  width: 261px;
+  width: 275px;
   padding: 15px;
   
   background-color: #f8f7f4;
@@ -179,41 +203,47 @@ a.logo {
   z-index: 10;
 }
 
-.search-form input{
-  
-}
-
-search-form:hover,
-.search:hover .search-form {
+.search-form:hover,
+.search:hover + .search-form {
   display: block;
 }
 
-.login a{
-  position: relative;
-  padding-left: 30px;
+.login {
+  width: 50px;
 }
 
-.login a::before{
+.login::before{
   content: "";
   position: absolute;
   width: 20px;
   height: 20px;
-  left: 2px;
+  left: 15px;
   background-image: url(img/svg/entrance%20white.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.cart a{
-  position: relative;
-  padding-left: 30px;
+.login:hover::before{
+  background-image: url(img/svg/entrance.svg);
 }
 
-.cart a::before{
+.cart {
+  width: 80px;
+}
+
+.cart::before{
   content: "";
   position: absolute;
   width: 20px;
   height: 20px;
-  left: 2px;
+  left: 15px;
   background-image: url(img/svg/basket.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.cart:hover::before{
+  background-image: url(img/svg/basket-red.svg);
 }
 
 .slider {
@@ -228,10 +258,7 @@ search-form:hover,
   box-sizing: border-box;
   padding: 22px;
   margin-bottom: 26px;
-  
   border-radius: 13px;
-  
-  outline: 1px solid magenta;
 }
 
 .left h2,
