@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     padding: 0;
@@ -112,22 +111,115 @@ a.logo {
 .navigation li{
   position: relative;
   display: inline-block;
+}
+
+.navigation a {
+  position: relative;
+  display: block;
+  margin: 10px;
+  border: 0;
+}
+
+.navigation a:hover {
+  color: #000000;
+}
+
+ a.navigation:hover::before {
+  content: "";
+  position: absolute;
+  display: block;
   padding: 6px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.navigation li:hover{
-  background-color: #f8f7f4;
-  border-radius: 20px;
+  width: 100%;
+  height: 20px;
+  top: -6px;
+  left: -6px;
   
-}
-
-.navigation li:hover a{
-  background-color: #f8f7f4;
   color: #343434;
   font-weight: 600;
-  border: 0;
+  background-color: #f8f7f4;
+  border-radius: 20px;
+  z-index: -1;
+}
+
+ a.navigation::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 1px;
+  top: 20px;
+  left: 0px;
+  background-color: #f8f7f4;
+}
+
+a.catalog {
+  border-bottom: 10px solid transparent;
+}
+
+.catalog:hover + .menu,
+.menu:hover {
+  display: block;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  
+  top: 40px;
+  left: -5px;
+  width: 150px;
+  
+  background-color: #f8f7f4;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+.menu li{
+  display: block;
+  box-sizing: border-box;
+}
+
+ul.menu li:hover,
+ul.menu li:hover a{
+  border-radius: 0;
+  background-color: #fbded7;
+}
+
+ul.menu li:active,
+ul.menu li:active a{
+  background-color: #f6b5a5;
+}
+
+.menu li:nth-child(1){
+  position: relative;
+}
+
+.menu li:nth-child(1)::after{
+  content: "";
+  position: absolute;
+  display: block;
+  top: 40px;
+  left: 10px;
+  width: 130px;
+  height: 1px;
+  background-color: #d3d3d2;
+}
+
+ul.menu a.menu-item{
+  margin: 0;
+  padding: 10px;
+  padding-left: 15px;
+  color: #343434;
+  font-weight: 400;
+}
+
+.menu li:nth-child(1) a{
+  font-weight: 600;
 }
 
 .services ul{
@@ -169,10 +261,6 @@ a.logo {
   border-radius: 40px;
 }
 
-.search:hover {
-  background-image: url(img/svg/loupe.svg);
-}
-
 a.search {
   position: relative;
   width: 16px;
@@ -210,8 +298,9 @@ a.search {
   display: block;
 }
 
-.login {
+a.login {
   width: 50px;
+  border: 10px solid #849d8f; 
 }
 
 .login::before{
@@ -227,6 +316,46 @@ a.search {
 
 .login:hover::before{
   background-image: url(img/svg/entrance.svg);
+}
+
+.login:hover + .login-form,
+.login-form:hover {
+  display: block;
+}
+
+.login-form {
+  display: none;
+  position: absolute;
+  left: -165px;
+  top: 54px;
+  
+  box-sizing: border-box;
+  width: 275px;
+  padding: 15px;
+  
+  background-color: #f8f7f4;
+  border-radius: 5px;
+  
+  z-index: 10;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between
+}
+
+.wrapper a{
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  font-weight: 400;
+  text-decoration: underline;
+  color: #000000;
+  border-radius: 0;
+}
+
+.wrapper a:hover{
+  font-weight: 400;
 }
 
 .cart {
@@ -564,6 +693,7 @@ input {
   width: 100%;
   height: 46px;
   padding: 12px;
+  margin-bottom: 10px;
   box-sizing: border-box;
   
   font-size: 16px;
@@ -691,16 +821,35 @@ footer p {
 .about {
   display: flex;
   flex-wrap: wrap;
-  
-  width: 360px;
+  justify-content: space-between;
+  width: 320px;
 }
 
-.about .column {
-  padding-left: 32px;
+.column {
+  width: 140px;
+}
+
+.column:nth-child(2) {
+  width: 180px;
 }
 
 .about a{
-/*  display: inline-block;*/
+  position: relative;
+  border: 0;
+}
+
+.about a::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 1px;
+  top: 18px;
+  background-color: rgba(255,255,255, 0.5);
+}
+
+.about a:hover::after {
+  background-color: #ffbc9e;
 }
 
 .heart {
@@ -714,7 +863,7 @@ footer p {
   display: block;
   width: 15px;
   height: 15px;
-  top: 5px;
+  top: 2px;
   left: -20px;
   background-image: url(img/svg/heart.svg);
   background-repeat: no-repeat;
