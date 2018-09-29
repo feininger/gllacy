@@ -246,6 +246,20 @@ a.search {
   background-image: url(img/svg/basket-red.svg);
 }
 
+.phone {
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.phone span {
+  font-size: 14px;
+}
+
+.phone b {
+  font-size: 22px;
+}
+
 .slider {
   width: 100%;
 }
