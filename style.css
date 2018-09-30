@@ -203,7 +203,7 @@ ul.menu li:active a{
   content: "";
   position: absolute;
   display: block;
-  top: 40px;
+  top: 41px;
   left: 10px;
   width: 130px;
   height: 1px;
