@@ -7,6 +7,14 @@
   <title>Gllacy ice cream shop</title>
 </head>
 <body>
+   <input type="radio" id="radio-1" name="slider-control" checked>
+   <input type="radio" id="radio-2" name="slider-control">
+   <input type="radio" id="radio-3" name="slider-control">
+   
+   <div class="page-wrapper">
+
+ 
+ 
   <header class="container">
     <nav class="main-nav">
      <a class="logo" href="index.html"><img src="img/svg/logo.svg" alt="Gllacy logo"></a>
@@ -60,9 +68,35 @@
       <input type="text" placeholder="поиск">
     </form>
   </header>
+  
+  <div class="slider container">
+    <div class="slide" id="slide-1">
+      <div class="slide-wrapper">
+        <p class="slider-header">Крем-брюле и&nbsp;пломбир с&nbsp;малиновым джемом</p>
+        <button class="slider-btn btn">Давайте оба!</button>
+      </div>
+    </div>
+    <div class="slide" id="slide-2">
+      <div class="slide-wrapper">
+        <p class="slider-header">Шоколадный пломбир и&nbsp;лимонный сорбет </p>
+        <button class="slider-btn btn">Давайте оба!</button>
+      </div>
+    </div>
+    <div class="slide" id="slide-3">
+      <div class="slide-wrapper">
+        <p class="slider-header">Пломбир с&nbsp;помадкой и&nbsp;клубничный щербет</p>
+        <button class="slider-btn btn">Давайте оба!</button>
+      </div>
+    </div>
+      <div class="slider-points">
+        <label class="point" for="radio-1"></label>
+        <label class="point" for="radio-2"></label>
+        <label class="point" for="radio-3"></label>
+    </div>
+  </div>
+  
   <main class="container">
     <article class="article">
-      <section class="slider">slider</section>
       <section class="left raspberry">
         <h2>Малинка даром!</h2>
         <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
@@ -172,7 +206,7 @@
     </div>
     
   </footer>
-
+</div>
 
 </body>
 </html>
