@@ -226,6 +226,7 @@ a.logo {
 
 .navigation a:hover {
   color: #000000;
+  z-index: 1;
 }
 
  a.navigation:hover::before {
@@ -331,11 +332,11 @@ ul.menu a.menu-item{
   justify-content: flex-end;
   align-content: center;
   align-items: center;
-  margin-top: 10px;
   height: 64px;
   padding: 0;
   margin: 0;
   margin-top: 10px;
+  padding-top: 15px;
   list-style: none;
   text-align: right;
 }
@@ -369,12 +370,14 @@ a.search {
   position: relative;
   width: 16px;
   height: 16px;
-  margin-right: -10px;
   padding: 10px;
   background-image: url(img/svg/loupe.svg);
   background-repeat: no-repeat;
   background-position: center;
-  border: 10px solid #849d8f; /* #849d8f */
+}
+
+.search-fix {
+  border-bottom: 10px solid transparent; /* transparent */
 }
 
 .search:hover {
@@ -385,7 +388,7 @@ a.search {
   display: none;
   position: absolute;
   left: -221px;
-  top: 55px;
+  top: 45px;
   
   box-sizing: border-box;
   width: 275px;
@@ -397,6 +400,7 @@ a.search {
   z-index: 10;
 }
 
+.search-fix:hover > .search-form,
 .search-form:hover,
 .search:hover + .search-form {
   display: block;
@@ -404,7 +408,10 @@ a.search {
 
 a.login {
   width: 50px;
-  border: 10px solid #849d8f; 
+}
+
+.login-fix {
+  border-bottom: 10px solid transparent; /* transparent */
 }
 
 .login::before{
@@ -422,6 +429,7 @@ a.login {
   background-image: url(img/svg/entrance.svg);
 }
 
+.login-fix:hover > .login-form,
 .login:hover + .login-form,
 .login-form:hover {
   display: block;
@@ -431,7 +439,7 @@ a.login {
   display: none;
   position: absolute;
   left: -165px;
-  top: 54px;
+  top: 44px;
   
   box-sizing: border-box;
   width: 275px;
@@ -464,6 +472,10 @@ a.login {
 
 .cart {
   width: 80px;
+}
+
+.cart-fix {
+  border-bottom: 10px solid transparent; /* transparent */
 }
 
 .cart::before{
