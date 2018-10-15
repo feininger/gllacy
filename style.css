@@ -803,6 +803,10 @@ input {
   border-radius: 4px;
 }
 
+.search-form input {
+  margin-bottom: 0;
+}
+
 .map {
   position: relative;
   width: 100%;
